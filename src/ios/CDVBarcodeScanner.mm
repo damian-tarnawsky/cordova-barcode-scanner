@@ -21,9 +21,9 @@
         return captureController;
     }else{
      
-        ZXingWidgetController *widgetController = [[ZXingWidgetController alloc] initWithDelegate:self showCancel:YES OneDMode:NO showLicense: NO];
-        widgetController.soundToPlay = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"beep-beep" ofType:@"aiff"] isDirectory:NO];
-        return widgetController;
+        //ZXingWidgetController *widgetController = [[ZXingWidgetController alloc] initWithDelegate:self showCancel:YES OneDMode:NO showLicense: NO];
+        //widgetController.soundToPlay = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"beep-beep" ofType:@"aiff"] isDirectory:NO];
+        //return widgetController;
     }
 }
 

@@ -3,15 +3,15 @@
 //  BarcodeScanner
 //
 //  Created by Jonathan Nunez Aguin on 30/09/2013.
-//
+//  
 //
 
 #import <Foundation/Foundation.h>
 #import <Cordova/CDVPlugin.h>
-#import "ZXingWidgetController.h"
+//#import "ZXingWidgetController.h"
 #import "CaptureBarcodesViewController.h"
 
-@interface CDVBarcodeScanner : CDVPlugin <ZXingDelegate, CaptureBarcodesDelegate>{
+@interface CDVBarcodeScanner : CDVPlugin <CaptureBarcodesDelegate>{
 
 }
 
