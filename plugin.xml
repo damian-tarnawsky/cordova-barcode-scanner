@@ -29,7 +29,7 @@
     <source-file src="src/ios/CaptureOverlayView.m"/>
     <header-file src="src/ios/ZXingWidgetController.h"/>
     <resource-file src="src/ios/empty.cpp"/>
-    <source-file src="src/ios/libZXingWidgetLibrary.a" framework="true" compiler-flags="-fno-objc-arc"/>
+    <!-- <source-file src="src/ios/libZXingWidgetLibrary.a" framework="true" compiler-flags="-fno-objc-arc"/>-->
 
     <framework src="libz.dylib" />
     <framework src="libc++.dylib" />
