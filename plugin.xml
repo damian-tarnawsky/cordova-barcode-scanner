@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="coollatte.cordova-barcode-scanner"
-    version="1.0.3">
+    version="1.0.4">
 
   <name>BarcodeScanner</name>
   <description>Scans Barcodes.</description>
@@ -41,7 +41,7 @@
     <framework src="AudioToolbox.framework" />
 
     <js-module src="www/barcodescanner.js" name="barcodescanner">
-      <clobbers target="plugins.barcodeScanner" />
+      <clobbers target="cordova.plugins.barcodeScanner" />
     </js-module>
 
   </platform>
