@@ -61,27 +61,27 @@
     [self.commandDelegate sendPluginResult:result callbackId:self.callbackId];
 }
 
-#pragma mark -
-#pragma mark ZXingDelegate
-
-- (void)zxingController:(ZXingWidgetController*)controller didScanResult:(NSString *)result format: (NSString*)format{
-
-    [self.viewController dismissModalViewControllerAnimated: YES];
-    
-    [self returnSuccess:result format:format cancelled: NO];
-}
-
-- (void)zxingControllerDidCancel:(ZXingWidgetController*)controller{
-    
-    [self.viewController dismissModalViewControllerAnimated: YES];
-    
-    [self returnSuccess:@"" format:@"" cancelled: YES];
-}
-
-- (BOOL)zxingController:(ZXingWidgetController*)controller shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
- 
-    return [self.viewController shouldAutorotateToInterfaceOrientation: interfaceOrientation];
-}
+//#pragma mark -
+//#pragma mark ZXingDelegate
+//
+//- (void)zxingController:(ZXingWidgetController*)controller didScanResult:(NSString *)result format: (NSString*)format{
+//
+//    [self.viewController dismissModalViewControllerAnimated: YES];
+//    
+//    [self returnSuccess:result format:format cancelled: NO];
+//}
+//
+//- (void)zxingControllerDidCancel:(ZXingWidgetController*)controller{
+//    
+//    [self.viewController dismissModalViewControllerAnimated: YES];
+//    
+//    [self returnSuccess:@"" format:@"" cancelled: YES];
+//}
+//
+//- (BOOL)zxingController:(ZXingWidgetController*)controller shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
+// 
+//    return [self.viewController shouldAutorotateToInterfaceOrientation: interfaceOrientation];
+//}
 
 #pragma mark -
 #pragma mark CaptureDelegate
