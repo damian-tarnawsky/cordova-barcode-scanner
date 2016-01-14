@@ -27,7 +27,7 @@
     <source-file src="src/ios/CaptureBarcodesViewController.m"/>
     <header-file src="src/ios/CaptureOverlayView.h"/>
     <source-file src="src/ios/CaptureOverlayView.m"/>
-    <header-file src="src/ios/ZXingWidgetController.h"/>
+    <!--<header-file src="src/ios/ZXingWidgetController.h"/>-->
     <resource-file src="src/ios/empty.cpp"/>
     <!-- <source-file src="src/ios/libZXingWidgetLibrary.a" framework="true" compiler-flags="-fno-objc-arc"/>-->
 
