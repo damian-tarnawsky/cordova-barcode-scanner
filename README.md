@@ -1,7 +1,7 @@
-BarcodeScanner
-==============
+Barcode Scanner
+===============
 
-Cross-platform BarcodeScanner for Cordova / PhoneGap.
+Cross-platform BarcodeScanner for Cordova / PhoneGap. Uses the IOS 7+ built in barcode scanning feature by Apple for very fast scanning.
 
 Follows the [Cordova Plugin spec](http://docs.phonegap.com/en/3.0.0/plugin_ref_spec.md.html), so that it works with [Plugman](https://github.com/apache/cordova-plugman).
 
@@ -21,27 +21,10 @@ Note: the WP8 source does not include the ZXing.Net library, so it has to
 be included during installation.
 
 ## Using the plugin ##
-The plugin creates the object `plugins.barcodeScanner` with the method `scan(success, fail)`. 
+The plugin creates the object `cordova.plugins.barcodeScanner` with the method `scan(success, fail)`. 
 
 The following barcode types are currently supported:
-### Android
-
-* QR_CODE
-* DATA_MATRIX
-* UPC_E
-* UPC_A
-* EAN_8
-* EAN_13
-* CODE_128
-* CODE_39
-* CODE_93
-* CODABAR
-* ITF
-* RSS14
-* PDF417
-* RSS_EXPANDED
-
-### iOS
+### iOS (7.0 and above)
 
 * AZTEC
 * CODABAR
@@ -60,6 +43,23 @@ The following barcode types are currently supported:
 * UPC_A
 * UPC_E
 * UPC_EAN_EXTENSION
+
+### Android
+
+* QR_CODE
+* DATA_MATRIX
+* UPC_E
+* UPC_A
+* EAN_8
+* EAN_13
+* CODE_128
+* CODE_39
+* CODE_93
+* CODABAR
+* ITF
+* RSS14
+* PDF417
+* RSS_EXPANDED
 
 ### WP8
 
@@ -97,10 +97,8 @@ Windows Phone 8 needs some more steps:
 `success` and `fail` are callback functions. Success is passed an object with data, type and cancelled properties. Data is the text representation of the barcode data, type is the type of barcode detected and cancelled is whether or not the user cancelled the scan.
 
 A full example could be:
-```
-   var scanner = cordova.require("com.phonegap.plugins.barcodescanner.barcodescanner");
-
-   scanner.scan(
+```   
+   cordova.plugins.barcodeScanner.scan(
       function (result) {
           alert("We got a barcode\n" +
                 "Result: " + result.text + "\n" +
