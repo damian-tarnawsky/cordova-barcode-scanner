@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="coollatte.cordova-barcode-scanner"
-    version="1.0.4">
+    version="1.0.5">
 
   <name>BarcodeScanner</name>
   <description>Scans Barcodes.</description>
@@ -28,7 +28,7 @@
     <header-file src="src/ios/CaptureOverlayView.h"/>
     <source-file src="src/ios/CaptureOverlayView.m"/>
     <!--<header-file src="src/ios/ZXingWidgetController.h"/>-->
-    <resource-file src="src/ios/empty.cpp"/>
+    <!--<resource-file src="src/ios/empty.cpp"/>-->
     <!-- <source-file src="src/ios/libZXingWidgetLibrary.a" framework="true" compiler-flags="-fno-objc-arc"/>-->
 
     <framework src="libz.dylib" />
