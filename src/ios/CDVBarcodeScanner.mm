@@ -104,8 +104,8 @@
     [self returnSuccess:@"" format:@"" cancelled: YES];
 }
 
-- (BOOL)captureController:(CaptureBarcodesViewController*)controller shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
-     return [self.viewController shouldAutorotateToInterfaceOrientation: interfaceOrientation];
+- (BOOL)captureController:(CaptureBarcodesViewController*)controller shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{   
+    return YES;     
 }
 
 @end
