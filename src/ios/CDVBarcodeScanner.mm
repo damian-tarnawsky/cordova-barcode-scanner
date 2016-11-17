@@ -104,8 +104,30 @@
     [self returnSuccess:@"" format:@"" cancelled: YES];
 }
 
-- (BOOL)captureController:(CaptureBarcodesViewController*)controller shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{   
-    return YES;     
+#pragma mark CDVBarcodeScannerOrientationDelegate
+
+- (BOOL)shouldAutorotate
+{   
+    return YES;// NO;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    return UIInterfaceOrientationPortrait;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll; // UIInterfaceOrientationMaskPortrait;
+}
+
+- (BOOL)captureController:(CaptureBarcodesViewController*)controller shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
+    if ((self.orientationDelegate != nil) && [self.orientationDelegate respondsToSelector:@selector(shouldAutorotateToInterfaceOrientation:)]) {
+        return [self.orientationDelegate shouldAutorotateToInterfaceOrientation:interfaceOrientation];
+    }
+    
+    return YES;
+     
 }
 
 @end
