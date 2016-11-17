@@ -104,8 +104,6 @@
     [self returnSuccess:@"" format:@"" cancelled: YES];
 }
 
-#pragma mark CDVBarcodeScannerOrientationDelegate
-
 - (BOOL)shouldAutorotate
 {   
     return YES;// NO;
